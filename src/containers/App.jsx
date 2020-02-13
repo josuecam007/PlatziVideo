@@ -9,17 +9,34 @@ import Footer from '../components/Footer';
 
 const App = () => (
     <div className="App">
-        <Header/>
-        <Search/>
-        <Categories>
+        <Header />
+        <Search />
+        <Categories title="Mi lista">
             <Carousel>
-                <CarouselItem/>
-                <CarouselItem/>
-                <CarouselItem/>
-                <CarouselItem/>
+                <CarouselItem />
+                <CarouselItem />
+                <CarouselItem />
+                <CarouselItem />
             </Carousel>
         </Categories>
+
+        <Categories title="Tendencias">
+            <Carousel>
+                <CarouselItem />
+                <CarouselItem />
+                
+            </Carousel>
+        </Categories>
+
+        <Categories title="Original">
+            <Carousel>
+                <CarouselItem />
+               
+            </Carousel>
+        </Categories>
+
         <Footer/>
+            
     </div>
 );
 
