@@ -5,7 +5,7 @@ import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
-import useInitialState from '../hooks/useInitialState';
+// import useInitialState from '../hooks/useInitialState';
 
 const Home = ({ myList, trends, originals }) => {
   return (
@@ -16,7 +16,11 @@ const Home = ({ myList, trends, originals }) => {
         <Categories title="Mi lista">
           <Carousel>
             {myList.map(item => (
-              <CarouselItem key={item.id} {...item} />
+              <CarouselItem 
+                key={item.id} 
+                {...item} 
+                isList
+              />
             ))}
           </Carousel>
         </Categories>
@@ -53,4 +57,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null);
+export default connect(mapStateToProps, null)(Home);
