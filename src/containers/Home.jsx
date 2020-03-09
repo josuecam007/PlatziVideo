@@ -10,7 +10,7 @@ import CarouselItem from '../components/CarouselItem';
 const Home = ({ myList, trends, originals }) => {
   return (
     <>
-      <Search />
+      <Search isHome />
 
       {myList && (
         <Categories title="Mi lista">

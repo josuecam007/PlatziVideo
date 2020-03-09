@@ -1,4 +1,4 @@
-import React, { useSatate, useState } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginRequest } from '../actions';
@@ -61,7 +61,7 @@ const Login = props => {
           </div>
         </section>
         <p className="login__container--register">
-          No tienes ninguna cuenta
+          No tienes ninguna cuenta {' '}
           <Link to="/register">Regístrate</Link>
         </p>
       </section>
@@ -71,6 +71,6 @@ const Login = props => {
 
 const mapDispatchToProps = {
   loginRequest,
-}
+};
 
 export default connect(null, mapDispatchToProps)(Login);
